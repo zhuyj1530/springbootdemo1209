@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:shiro="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="${name}"></h1>
+
+        <h3 shiro:hasPermission="user:add">
+            进入用户新增页面：<a href="/add" >用户新增</a>
+        </h3>
+        <h3 shiro:hasPermission="user:update">
+            进入用户更新页面：<a href="/update" >用户更新</a>
+        </h3>
+        <h3>
+            <a href="/logout">退出</a>
+        </h3>
+</body>
+</html>
